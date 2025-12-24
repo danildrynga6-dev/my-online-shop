@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Shop</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; text-align: center; color: #333; }
+        .container { display: flex; justify-content: center; gap: 20px; padding: 50px; flex-wrap: wrap; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 220px; }
+        img { width: 100%; border-radius: 10px; }
+        .price { color: #2b2e2cff; font-weight: bold; font-size: 1.2em; }
+        button { background: #3498db; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; }
+        button:hover { background: #2980b9; }
+    </style>
+</head>
+<body>
+    <h1> Layer</h1>
+    <div class="container">
+        {% for item in clothes %}
+        <div class="card">
+            <img src="{{ item.img }}">
+            <h3>{{ item.name }}</h3>
+            <p class="price">{{ item.price }} ₽</p>
+            <button>Купить</button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
